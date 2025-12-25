@@ -4,165 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>🎄 Natal Interativo 2025 🎄</title>
+<link rel="stylesheet" href="css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
-<style>
-body {
-  margin: 0;
-  font-family: 'Mountains of Christmas', cursive;
-  background: linear-gradient(to bottom, #330000, #660022, #220011);
-  overflow-x: hidden;
-  color: white;
-  text-align: center;
-}
-header {
-  background: linear-gradient(to right, #660022, #990033);
-  padding: 30px 0;
-  font-size: 3em;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px #000;
-}
-.main-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 5%;
-  flex-wrap: wrap;
-  margin: 40px auto;
-  max-width: 90%;
-}
-.tree-container {
-  flex: 1 1 300px;
-  max-width: 350px;
-  position: relative;
-}
-.tree-container img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 0 30px 10px rgba(255,255,0,0.8);
-  transition: transform 0.3s;
-}
-.tree-container img:hover { transform: scale(1.05); }
-.santa-container {
-  flex: 1 1 220px;
-  max-width: 250px;
-  position: relative;
-}
-.santa-container img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 0 25px 8px rgba(255,255,255,0.8);
-  transition: transform 0.3s;
-}
-.santa-container img:hover { transform: scale(1.05); }
-.light {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  position: absolute;
-  animation: blink 1.5s infinite;
-  box-shadow: 0 0 10px 3px;
-}
-.red { background: red; box-shadow: 0 0 10px 3px red; }
-.yellow { background: yellow; box-shadow: 0 0 10px 3px yellow; }
-.blue { background: blue; box-shadow: 0 0 10px 3px blue; }
-.green { background: lime; box-shadow: 0 0 10px 3px lime; }
-@keyframes blink {
-  0%,100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-.message {
-  margin: 20px auto;
-  font-size: 1.8em;
-  color: #ffcc00;
-  text-shadow: 2px 2px 4px #990000;
-  max-width: 90%;
-}
-.extra-content {
-  max-width: 900px;
-  margin: 40px auto;
-  text-align: left;
-  font-size: 1.3em;
-  line-height: 1.8em;
-  background: rgba(255,0,0,0.3);
-  border: 2px solid #ffcc00;
-  padding: 25px;
-  border-radius: 25px;
-  position: relative;
-}
-.extra-content h2 {
-  text-align: center;
-  font-size: 2em;
-  color: #ffcc00;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 2px #000;
-}
-footer {
-  background: linear-gradient(to right, #660022, #990033);
-  padding: 25px 0;
-  font-size: 1.2em;
-  color: #ffcc00;
-  text-shadow: 1px 1px 2px #000;
-}
-.snowflake {
-  position: fixed;
-  top: -10px;
-  color: white;
-  font-size: 1.5em;
-  user-select: none;
-  z-index: 9999;
-  animation-name: fall;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-@keyframes fall {
-  0% { transform: translateY(0) rotate(0deg); }
-  100% { transform: translateY(100vh) rotate(360deg); }
-}
-#gameSection {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 20px;
-  background: rgba(0,0,0,0.3);
-  border: 2px solid #ffcc00;
-  border-radius: 25px;
-}
-#gameArea {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  margin: auto;
-  border: 2px solid #ffcc00;
-  border-radius: 15px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.05);
-}
-.present {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  transition: transform 0.1s;
-}
-.present:hover { transform: scale(1.2); }
-#score {
-  font-size: 1.5em;
-  margin: 15px;
-  color: #ffcc00;
-  text-shadow: 1px 1px 2px #000;
-}
-button {
-  padding: 10px 20px;
-  font-size: 1.2em;
-  margin: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: #ff0000;
-  color: #fff;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-button:hover { background-color: #cc0000; }
-</style>
 </head>
 <body>
 
@@ -170,7 +13,7 @@ button:hover { background-color: #cc0000; }
 
 <div class="main-container">
   <div class="tree-container">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACJElEQVR4nO3bQQ0CMRBF0eZ//+uU0pTsl9w/IC0bD+rUZIkSZIkSb0iT+CBZ9eDHh13x+AQAAAAAAAAAAAAC8a+uz/fbZ+rg7+S0FX6rA1PxgHzbY8V4B/17/oQfZ+73jD85/7p4b6+Y1fOfv9X7cv+6aXr+z76/u0eP33l0vj9n7qD7bZ+yH5d+36n6H4Ff7sRz8AAAAAAAAAAAAAAAD4pfwA/oJ/4ee/7u2f+gAAAAAAAAAAAAAAAPw0/gP/Aw6G+ki/22yQAAAABJRU5ErkJggg==" alt="Árvore de Natal">
+    <img src="imagens/arvore.png" alt="Árvore de Natal">
     <div class="light red" style="top: 40px; left: 50px;"></div>
     <div class="light yellow" style="top: 90px; left: 120px;"></div>
     <div class="light blue" style="top: 130px; left: 70px;"></div>
@@ -180,7 +23,7 @@ button:hover { background-color: #cc0000; }
   </div>
 
   <div class="santa-container">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABYElEQVR4nO3R0Q2DMAwE0O4p/3Z3hRUeCE7DSOdC0JJkiRJkiRJ0iT2Ncg/mcIzuP0EXVfUgAAAAAAAAAAAADwX4n3xH+u6fY8O+2A8Bs/P+zB/yrGf/s7o/zv3+P+O7X9h7+t1V0P+O4fN4z4/f9/f39/AAAAAAAAAAAAAAAAAADwBf5fZTvqGv+YN6p+sVw6n/sP9XeXfJv9+3b/5f1/7u8f/3/9P5f7/7t/f7v1h1+3+63/9e4+7/AAAAAAAAAAAAAAAAAAAA8Fv+g7ykf0FZ7sQAAAAASUVORK5CYII=" alt="Papai Noel">
+    <img src="imagens/papai_noel.png" alt="Papai Noel">
   </div>
 </div>
 
@@ -191,19 +34,20 @@ button:hover { background-color: #cc0000; }
 <div class="extra-content">
   <h2>🎅 Curiosidades e Atividades de Natal</h2>
   <ul>
-    <li>O Papai Noel moderno foi popularizado por campanhas de Coca-Cola nos anos 1930.</li>
-    <li>O costume de montar árvore de Natal começou na Alemanha no século XVI.</li>
-    <li>Presentes são tradicionalmente dados como símbolo de amor e amizade.</li>
-    <li>Você pode criar enfeites artesanais para a árvore usando papel, feltro ou madeira.</li>
-    <li>Ouça músicas natalinas para entrar no clima e ilumine sua casa com luzes coloridas!</li>
-    <li>Receitas natalinas como rabanada, panetone e biscoitos decorados tornam a época mais deliciosa.</li>
-    <li>Atividades de família incluem troca de presentes, jogos, contação de histórias e decorações.</li>
+    <li>O Papai Noel moderno foi popularizado nos anos 1930.</li>
+    <li>Montar árvore de Natal começou na Alemanha no século XVI.</li>
+    <li>Presentes simbolizam amor e amizade.</li>
+    <li>Crie enfeites artesanais com papel, feltro ou madeira.</li>
+    <li>Ouça músicas natalinas e ilumine sua casa com luzes coloridas!</li>
+    <li>Receitas natalinas como rabanada e panetone tornam a época mais deliciosa.</li>
+    <li>Atividades em família incluem troca de presentes, jogos e histórias.</li>
   </ul>
 </div>
 
 <div id="gameSection">
   <h2>🎮 Pegue os Presentes! 🎄</h2>
   <div id="score">Pontuação: 0</div>
+  <div id="timer">Tempo restante: 30s</div>
   <button onclick="startGame()">Iniciar Jogo</button>
   <div id="gameArea"></div>
 </div>
@@ -225,10 +69,14 @@ button:hover { background-color: #cc0000; }
 <span class="snowflake" style="left:85%; animation-duration:11s;">❄</span>
 
 <script>
+// Sons de Natal ao pegar presentes
+const presentSound = new Audio("https://www.soundjay.com/buttons/sounds/button-16.mp3");
+
 let score = 0;
 let gameInterval;
 let presents = [];
-const gameDuration = 30000; // 30s
+let countdownInterval;
+let gameTime = 30; // segundos
 
 function randomPosition(max) {
   return Math.floor(Math.random() * max);
@@ -237,13 +85,10 @@ function randomPosition(max) {
 function createPresent() {
   const gameArea = document.getElementById('gameArea');
   const present = document.createElement('img');
-  present.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABKklEQVR4nO3YwQ2CMBBF0QqgQxOsHCOzDxBciBJICX4fUe2Jc88RMkSZIkiRJ0iT2Prw/zChtU39lvsVgAAAAAAAAAA8P8WfY0c3d2Pn/2+Lfgz/T8H9mP/1XfX//v7f0Hx83n43/P/13/5/D+8b/v8N+3l9v7gAAAAAAAAAAAAAA+v8D/s/8HyPc1zwgAAAAASUVORK5CYII=";
+  present.src = "imagens/presente.png";
   present.classList.add('present');
-
-  const x = randomPosition(gameArea.clientWidth - 50);
-  const y = randomPosition(gameArea.clientHeight - 50);
-  present.style.left = x + 'px';
-  present.style.top = y + 'px';
+  present.style.left = randomPosition(gameArea.clientWidth - 50) + 'px';
+  present.style.top = randomPosition(gameArea.clientHeight - 50) + 'px';
 
   const timeout = setTimeout(() => {
     if(gameArea.contains(present)){
@@ -255,7 +100,23 @@ function createPresent() {
   present.onclick = function() {
     score++;
     document.getElementById('score').innerText = 'Pontuação: ' + score;
+    presentSound.play();
     clearTimeout(timeout);
+
+    // efeito de luz ao clicar
+    const light = document.createElement('div');
+    light.style.position = 'absolute';
+    light.style.width = '30px';
+    light.style.height = '30px';
+    light.style.borderRadius = '50%';
+    light.style.background = ['red','green','yellow','blue','purple','orange'][Math.floor(Math.random()*6)];
+    light.style.left = present.style.left;
+    light.style.top = present.style.top;
+    light.style.opacity = 1;
+    light.style.transition = 'all 0.5s';
+    gameArea.appendChild(light);
+    setTimeout(() => { light.style.opacity = 0; gameArea.removeChild(light); }, 500);
+
     gameArea.removeChild(present);
   }
 
@@ -263,29 +124,37 @@ function createPresent() {
   presents.push(present);
 }
 
+function updateTimer() {
+  const timerEl = document.getElementById('timer');
+  gameTime--;
+  timerEl.innerText = `Tempo restante: ${gameTime}s`;
+  if(gameTime <= 0){
+    alert('Fim do jogo! Sua pontuação: ' + score);
+    endGame();
+  }
+}
+
 function startGame() {
   score = 0;
+  gameTime = 30;
   document.getElementById('score').innerText = 'Pontuação: ' + score;
+  document.getElementById('timer').innerText = 'Tempo restante: ' + gameTime + 's';
   presents.forEach(p => p.remove());
   presents = [];
 
   gameInterval = setInterval(createPresent, 1000);
-
-  setTimeout(() => {
-    if(gameInterval) {
-      alert('Fim do jogo! Sua pontuação: ' + score);
-      endGame();
-    }
-  }, gameDuration);
+  countdownInterval = setInterval(updateTimer, 1000);
 }
 
 function endGame() {
   clearInterval(gameInterval);
+  clearInterval(countdownInterval);
   gameInterval = null;
+  countdownInterval = null;
   presents.forEach(p => p.remove());
   presents = [];
 }
 </script>
 
 </body>
-</html>
+  </html>
