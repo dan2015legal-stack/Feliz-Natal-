@@ -6,9 +6,6 @@
 <title>🎄 Natal Interativo 2025 🎄</title>
 <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
 <style>
-/* ========================= */
-/*        ESTILO GERAL       */
-/* ========================= */
 body {
   margin: 0;
   font-family: 'Mountains of Christmas', cursive;
@@ -18,9 +15,7 @@ body {
   text-align: center;
 }
 
-/* ========================= */
-/*          HEADER           */
-/* ========================= */
+/* Header */
 header {
   background: linear-gradient(to right, #660022, #990033);
   padding: 30px 0;
@@ -29,62 +24,59 @@ header {
   text-shadow: 2px 2px 5px #000;
 }
 
-/* ========================= */
-/*       CONTAINER PRINCIPAL */
-/* ========================= */
+/* Main container */
 .main-container {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  gap: 5%;
+  align-items: flex-start;
   flex-wrap: wrap;
+  gap: 5%;
   margin: 40px auto;
   max-width: 90%;
 }
 
-/* ========================= */
-/*        ÁRVORE DE NATAL    */
-/* ========================= */
+/* Árvores CSS simples */
 .tree-container {
   flex: 1 1 300px;
   max-width: 350px;
   position: relative;
 }
 
-.tree-container img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 0 30px 10px rgba(255,255,0,0.8);
-  transition: transform 0.3s;
-}
-
-.tree-container img:hover { 
-  transform: scale(1.05); 
-}
-
-/* ========================= */
-/*        PAPAI NOEL         */
-/* ========================= */
-.santa-container {
-  flex: 1 1 220px;
-  max-width: 250px;
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+  border-bottom: 100px solid green;
+  margin: 0 auto;
   position: relative;
 }
 
-.santa-container img {
-  width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 0 25px 8px rgba(255,255,255,0.8);
-  transition: transform 0.3s;
+.triangle:after {
+  content: '';
+  position: absolute;
+  left: -50px;
+  top: 40px;
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 90px solid green;
 }
 
-.santa-container img:hover { 
-  transform: scale(1.05); 
+.triangle:before {
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 80px;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 80px solid green;
 }
 
-/* ========================= */
-/*           LUZES           */
-/* ========================= */
+/* Luzes da árvore */
 .light {
   width: 16px;
   height: 16px;
@@ -104,9 +96,7 @@ header {
   50% { opacity: 0.3; }
 }
 
-/* ========================= */
-/*          MENSAGEM         */
-/* ========================= */
+/* Mensagem */
 .message {
   margin: 20px auto;
   font-size: 1.8em;
@@ -115,9 +105,7 @@ header {
   max-width: 90%;
 }
 
-/* ========================= */
-/*      CONTEÚDO EXTRA       */
-/* ========================= */
+/* Extra content */
 .extra-content {
   max-width: 900px;
   margin: 40px auto;
@@ -139,9 +127,7 @@ header {
   text-shadow: 1px 1px 2px #000;
 }
 
-/* ========================= */
-/*          FOOTER           */
-/* ========================= */
+/* Footer */
 footer {
   background: linear-gradient(to right, #660022, #990033);
   padding: 25px 0;
@@ -150,9 +136,7 @@ footer {
   text-shadow: 1px 1px 2px #000;
 }
 
-/* ========================= */
-/*          NEVE             */
-/* ========================= */
+/* Neve */
 .snowflake {
   position: fixed;
   top: -10px;
@@ -170,9 +154,7 @@ footer {
   100% { transform: translateY(100vh) rotate(360deg); }
 }
 
-/* ========================= */
-/*           JOGO            */
-/* ========================= */
+/* Jogo */
 #gameSection {
   max-width: 900px;
   margin: 50px auto;
@@ -195,15 +177,14 @@ footer {
 
 .present {
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   cursor: pointer;
   transition: transform 0.1s;
 }
 
-.present:hover { 
-  transform: scale(1.2); 
-}
+.present:hover { transform: scale(1.3); }
 
 #score {
   font-size: 1.5em;
@@ -218,9 +199,7 @@ footer {
   color: #ffcc00;
 }
 
-/* ========================= */
-/*         BOTÕES            */
-/* ========================= */
+/* Botões */
 button {
   padding: 10px 20px;
   font-size: 1.2em;
@@ -233,9 +212,7 @@ button {
   transition: background 0.3s;
 }
 
-button:hover { 
-  background-color: #cc0000; 
-}
+button:hover { background-color: #cc0000; }
 </style>
 </head>
 <body>
@@ -244,39 +221,31 @@ button:hover {
 
 <div class="main-container">
   <div class="tree-container">
-    <img src="imagens/arvore.png" alt="Árvore de Natal">
-    <div class="light red" style="top: 40px; left: 50px;"></div>
-    <div class="light yellow" style="top: 90px; left: 120px;"></div>
-    <div class="light blue" style="top: 130px; left: 70px;"></div>
-    <div class="light green" style="top: 180px; left: 150px;"></div>
-    <div class="light red" style="top: 210px; left: 90px;"></div>
-    <div class="light yellow" style="top: 260px; left: 130px;"></div>
-  </div>
-
-  <div class="santa-container">
-    <img src="imagens/papai_noel.png" alt="Papai Noel">
+    <div class="triangle"></div>
+    <div class="light red" style="top: 40px; left: 70px;"></div>
+    <div class="light yellow" style="top: 80px; left: 50px;"></div>
+    <div class="light blue" style="top: 110px; left: 90px;"></div>
+    <div class="light green" style="top: 150px; left: 60px;"></div>
+    <div class="light red" style="top: 190px; left: 80px;"></div>
   </div>
 </div>
 
 <div class="message">
-  Que seu Natal seja uma explosão de alegria, cores, luzes e momentos inesquecíveis com amigos e família! 🎁✨
+  Que seu Natal seja uma explosão de alegria, cores e luzes! 🎁✨
 </div>
 
 <div class="extra-content">
-  <h2>🎅 Curiosidades e Atividades de Natal</h2>
+  <h2>🎅 Curiosidades de Natal</h2>
   <ul>
     <li>O Papai Noel moderno foi popularizado nos anos 1930.</li>
     <li>Montar árvore de Natal começou na Alemanha no século XVI.</li>
     <li>Presentes simbolizam amor e amizade.</li>
-    <li>Crie enfeites artesanais com papel, feltro ou madeira.</li>
-    <li>Ouça músicas natalinas e ilumine sua casa com luzes coloridas!</li>
-    <li>Receitas natalinas como rabanada e panetone tornam a época mais deliciosa.</li>
-    <li>Atividades em família incluem troca de presentes, jogos e histórias.</li>
+    <li>Atividades em família incluem troca de presentes e histórias.</li>
   </ul>
 </div>
 
 <div id="gameSection">
-  <h2>🎮 Pegue os Presentes! 🎄</h2>
+  <h2>🎮 Pegue as Bolinhas! 🎄</h2>
   <div id="score">Pontuação: 0</div>
   <div id="timer">Tempo restante: 30s</div>
   <button onclick="startGame()">Iniciar Jogo</button>
@@ -284,7 +253,7 @@ button:hover {
 </div>
 
 <footer>
-  &copy; 2025 Natal Interativo. Que seu Natal seja cheio de luz, paz e amor! ❤️🎄
+  &copy; 2025 Natal Interativo. Luz, paz e amor! ❤️🎄
 </footer>
 
 <!-- Neve -->
@@ -300,30 +269,30 @@ button:hover {
 <span class="snowflake" style="left:85%; animation-duration:11s;">❄</span>
 
 <script>
-// Sons de Natal ao pegar presentes
-const presentSound = new Audio("https://www.soundjay.com/buttons/sounds/button-16.mp3");
-
 let score = 0;
 let gameInterval;
 let presents = [];
 let countdownInterval;
-let gameTime = 30; // segundos
+let gameTime = 30;
 
-function randomPosition(max) {
-  return Math.floor(Math.random() * max);
+function randomPosition(max) { return Math.floor(Math.random() * max); }
+
+function randomColor() {
+  const colors = ['red','green','yellow','blue','purple','orange'];
+  return colors[Math.floor(Math.random()*colors.length)];
 }
 
 function createPresent() {
   const gameArea = document.getElementById('gameArea');
-  const present = document.createElement('img');
-  present.src = "imagens/presente.png";
+  const present = document.createElement('div');
   present.classList.add('present');
-  present.style.left = randomPosition(gameArea.clientWidth - 50) + 'px';
-  present.style.top = randomPosition(gameArea.clientHeight - 50) + 'px';
+  present.style.backgroundColor = randomColor();
+  present.style.left = randomPosition(gameArea.clientWidth - 40) + 'px';
+  present.style.top = randomPosition(gameArea.clientHeight - 40) + 'px';
 
   const timeout = setTimeout(() => {
     if(gameArea.contains(present)){
-      alert('Você perdeu! Não conseguiu pegar o presente a tempo 😢');
+      alert('Você perdeu! Não pegou a bolinha a tempo 😢');
       endGame();
     }
   }, 2000);
@@ -331,23 +300,6 @@ function createPresent() {
   present.onclick = function() {
     score++;
     document.getElementById('score').innerText = 'Pontuação: ' + score;
-    presentSound.play();
-    clearTimeout(timeout);
-
-    // efeito de luz ao clicar
-    const light = document.createElement('div');
-    light.style.position = 'absolute';
-    light.style.width = '30px';
-    light.style.height = '30px';
-    light.style.borderRadius = '50%';
-    light.style.background = ['red','green','yellow','blue','purple','orange'][Math.floor(Math.random()*6)];
-    light.style.left = present.style.left;
-    light.style.top = present.style.top;
-    light.style.opacity = 1;
-    light.style.transition = 'all 0.5s';
-    gameArea.appendChild(light);
-    setTimeout(() => { light.style.opacity = 0; gameArea.removeChild(light); }, 500);
-
     gameArea.removeChild(present);
   }
 
@@ -360,7 +312,7 @@ function updateTimer() {
   gameTime--;
   timerEl.innerText = `Tempo restante: ${gameTime}s`;
   if(gameTime <= 0){
-    alert('Fim do jogo! Sua pontuação: ' + score);
+    alert('Fim do jogo! Pontuação: ' + score);
     endGame();
   }
 }
@@ -369,7 +321,7 @@ function startGame() {
   score = 0;
   gameTime = 30;
   document.getElementById('score').innerText = 'Pontuação: ' + score;
-  document.getElementById('timer').innerText = 'Tempo restante: ' + gameTime + 's';
+  document.getElementById('timer').innerText = 'Tempo restante: 30s';
   presents.forEach(p => p.remove());
   presents = [];
 
