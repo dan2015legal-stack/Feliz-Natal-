@@ -6,185 +6,162 @@
 <title>🎄 Natal Interativo 2025 🎄</title>
 <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  body {
-    margin: 0;
-    font-family: 'Mountains of Christmas', cursive;
-    background: linear-gradient(to bottom, #330000, #660022, #220011);
-    overflow-x: hidden;
-    color: white;
-    text-align: center;
-  }
-
-  header {
-    background: linear-gradient(to right, #660022, #990033);
-    padding: 30px 0;
-    font-size: 3em;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px #000;
-  }
-
-  /* Container principal responsivo */
-  .main-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 5%;
-    flex-wrap: wrap;
-    margin: 40px auto;
-    max-width: 90%;
-  }
-
-  /* Árvore */
-  .tree-container {
-    flex: 1 1 300px;
-    max-width: 350px;
-    position: relative;
-  }
-  .tree-container img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 0 30px 10px rgba(255,255,0,0.8);
-    transition: transform 0.3s;
-  }
-  .tree-container img:hover { transform: scale(1.05); }
-
-  /* Papai Noel */
-  .santa-container {
-    flex: 1 1 220px;
-    max-width: 250px;
-    position: relative;
-  }
-  .santa-container img {
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 0 25px 8px rgba(255,255,255,0.8);
-    transition: transform 0.3s;
-  }
-  .santa-container img:hover { transform: scale(1.05); }
-
-  /* Luzes coloridas */
-  .light {
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    position: absolute;
-    animation: blink 1.5s infinite;
-    box-shadow: 0 0 10px 3px;
-  }
-  .red { background: red; box-shadow: 0 0 10px 3px red; }
-  .yellow { background: yellow; box-shadow: 0 0 10px 3px yellow; }
-  .blue { background: blue; box-shadow: 0 0 10px 3px blue; }
-  .green { background: lime; box-shadow: 0 0 10px 3px lime; }
-
-  @keyframes blink {
-    0%,100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
-
-  .message {
-    margin: 20px auto;
-    font-size: 1.8em;
-    color: #ffcc00;
-    text-shadow: 2px 2px 4px #990000;
-    max-width: 90%;
-  }
-
-  .extra-content {
-    max-width: 900px;
-    margin: 40px auto;
-    text-align: left;
-    font-size: 1.3em;
-    line-height: 1.8em;
-    background: rgba(255,0,0,0.3);
-    border: 2px solid #ffcc00;
-    padding: 25px;
-    border-radius: 25px;
-    position: relative;
-  }
-
-  .extra-content h2 {
-    text-align: center;
-    font-size: 2em;
-    color: #ffcc00;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px #000;
-  }
-
-  footer {
-    background: linear-gradient(to right, #660022, #990033);
-    padding: 25px 0;
-    font-size: 1.2em;
-    color: #ffcc00;
-    text-shadow: 1px 1px 2px #000;
-  }
-
-  /* Neve espalhada */
-  .snowflake {
-    position: fixed;
-    top: -10px;
-    color: white;
-    font-size: 1.5em;
-    user-select: none;
-    z-index: 9999;
-    animation-name: fall;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  }
-  @keyframes fall {
-    0% { transform: translateY(0) rotate(0deg); }
-    100% { transform: translateY(100vh) rotate(360deg); }
-  }
-
-  /* Jogo de Natal */
-  #gameSection {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-    background: rgba(0,0,0,0.3);
-    border: 2px solid #ffcc00;
-    border-radius: 25px;
-  }
-
-  #gameArea {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    margin: auto;
-    border: 2px solid #ffcc00;
-    border-radius: 15px;
-    overflow: hidden;
-    background: rgba(255,255,255,0.05);
-  }
-
-  .present {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    transition: transform 0.1s;
-  }
-  .present:hover { transform: scale(1.2); }
-
-  #score {
-    font-size: 1.5em;
-    margin: 15px;
-    color: #ffcc00;
-    text-shadow: 1px 1px 2px #000;
-  }
-
-  button {
-    padding: 10px 20px;
-    font-size: 1.2em;
-    margin: 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: #ff0000;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  button:hover { background-color: #cc0000; }
-
+body {
+  margin: 0;
+  font-family: 'Mountains of Christmas', cursive;
+  background: linear-gradient(to bottom, #330000, #660022, #220011);
+  overflow-x: hidden;
+  color: white;
+  text-align: center;
+}
+header {
+  background: linear-gradient(to right, #660022, #990033);
+  padding: 30px 0;
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #000;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 5%;
+  flex-wrap: wrap;
+  margin: 40px auto;
+  max-width: 90%;
+}
+.tree-container {
+  flex: 1 1 300px;
+  max-width: 350px;
+  position: relative;
+}
+.tree-container img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 30px 10px rgba(255,255,0,0.8);
+  transition: transform 0.3s;
+}
+.tree-container img:hover { transform: scale(1.05); }
+.santa-container {
+  flex: 1 1 220px;
+  max-width: 250px;
+  position: relative;
+}
+.santa-container img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 0 25px 8px rgba(255,255,255,0.8);
+  transition: transform 0.3s;
+}
+.santa-container img:hover { transform: scale(1.05); }
+.light {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  animation: blink 1.5s infinite;
+  box-shadow: 0 0 10px 3px;
+}
+.red { background: red; box-shadow: 0 0 10px 3px red; }
+.yellow { background: yellow; box-shadow: 0 0 10px 3px yellow; }
+.blue { background: blue; box-shadow: 0 0 10px 3px blue; }
+.green { background: lime; box-shadow: 0 0 10px 3px lime; }
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.message {
+  margin: 20px auto;
+  font-size: 1.8em;
+  color: #ffcc00;
+  text-shadow: 2px 2px 4px #990000;
+  max-width: 90%;
+}
+.extra-content {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: left;
+  font-size: 1.3em;
+  line-height: 1.8em;
+  background: rgba(255,0,0,0.3);
+  border: 2px solid #ffcc00;
+  padding: 25px;
+  border-radius: 25px;
+  position: relative;
+}
+.extra-content h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #ffcc00;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #000;
+}
+footer {
+  background: linear-gradient(to right, #660022, #990033);
+  padding: 25px 0;
+  font-size: 1.2em;
+  color: #ffcc00;
+  text-shadow: 1px 1px 2px #000;
+}
+.snowflake {
+  position: fixed;
+  top: -10px;
+  color: white;
+  font-size: 1.5em;
+  user-select: none;
+  z-index: 9999;
+  animation-name: fall;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+#gameSection {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: rgba(0,0,0,0.3);
+  border: 2px solid #ffcc00;
+  border-radius: 25px;
+}
+#gameArea {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin: auto;
+  border: 2px solid #ffcc00;
+  border-radius: 15px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.05);
+}
+.present {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.present:hover { transform: scale(1.2); }
+#score {
+  font-size: 1.5em;
+  margin: 15px;
+  color: #ffcc00;
+  text-shadow: 1px 1px 2px #000;
+}
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff0000;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover { background-color: #cc0000; }
 </style>
 </head>
 <body>
@@ -193,7 +170,7 @@
 
 <div class="main-container">
   <div class="tree-container">
-    <img src="https://cdn.pixabay.com/photo/2017/11/02/22/03/christmas-tree-2911052_1280.png" alt="Árvore de Natal">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACJElEQVR4nO3bQQ0CMRBF0eZ//+uU0pTsl9w/IC0bD+rUZIkSZIkSb0iT+CBZ9eDHh13x+AQAAAAAAAAAAAAC8a+uz/fbZ+rg7+S0FX6rA1PxgHzbY8V4B/17/oQfZ+73jD85/7p4b6+Y1fOfv9X7cv+6aXr+z76/u0eP33l0vj9n7qD7bZ+yH5d+36n6H4Ff7sRz8AAAAAAAAAAAAAAAD4pfwA/oJ/4ee/7u2f+gAAAAAAAAAAAAAAAPw0/gP/Aw6G+ki/22yQAAAABJRU5ErkJggg==" alt="Árvore de Natal">
     <div class="light red" style="top: 40px; left: 50px;"></div>
     <div class="light yellow" style="top: 90px; left: 120px;"></div>
     <div class="light blue" style="top: 130px; left: 70px;"></div>
@@ -203,7 +180,7 @@
   </div>
 
   <div class="santa-container">
-    <img src="https://cdn.pixabay.com/photo/2017/11/10/05/48/santa-2930436_1280.png" alt="Papai Noel">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABYElEQVR4nO3R0Q2DMAwE0O4p/3Z3hRUeCE7DSOdC0JJkiRJkiRJ0iT2Ncg/mcIzuP0EXVfUgAAAAAAAAAAAADwX4n3xH+u6fY8O+2A8Bs/P+zB/yrGf/s7o/zv3+P+O7X9h7+t1V0P+O4fN4z4/f9/f39/AAAAAAAAAAAAAAAAAADwBf5fZTvqGv+YN6p+sVw6n/sP9XeXfJv9+3b/5f1/7u8f/3/9P5f7/7t/f7v1h1+3+63/9e4+7/AAAAAAAAAAAAAAAAAAAA8Fv+g7ykf0FZ7sQAAAAASUVORK5CYII=" alt="Papai Noel">
   </div>
 </div>
 
@@ -224,7 +201,6 @@
   </ul>
 </div>
 
-<!-- Seção do Jogo -->
 <div id="gameSection">
   <h2>🎮 Pegue os Presentes! 🎄</h2>
   <div id="score">Pontuação: 0</div>
@@ -236,7 +212,7 @@
   &copy; 2025 Natal Interativo. Que seu Natal seja cheio de luz, paz e amor! ❤️🎄
 </footer>
 
-<!-- Neve espalhada -->
+<!-- Neve -->
 <span class="snowflake" style="left:5%; animation-duration:8s;">❄</span>
 <span class="snowflake" style="left:12%; animation-duration:10s;">❄</span>
 <span class="snowflake" style="left:20%; animation-duration:9s;">❄</span>
@@ -252,7 +228,7 @@
 let score = 0;
 let gameInterval;
 let presents = [];
-const gameDuration = 30000; // 30 segundos
+const gameDuration = 30000; // 30s
 
 function randomPosition(max) {
   return Math.floor(Math.random() * max);
@@ -261,7 +237,7 @@ function randomPosition(max) {
 function createPresent() {
   const gameArea = document.getElementById('gameArea');
   const present = document.createElement('img');
-  present.src = "https://cdn.pixabay.com/photo/2017/12/26/10/38/gift-3044215_1280.png"; // presente
+  present.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAABKklEQVR4nO3YwQ2CMBBF0QqgQxOsHCOzDxBciBJICX4fUe2Jc88RMkSZIkiRJ0iT2Prw/zChtU39lvsVgAAAAAAAAAA8P8WfY0c3d2Pn/2+Lfgz/T8H9mP/1XfX//v7f0Hx83n43/P/13/5/D+8b/v8N+3l9v7gAAAAAAAAAAAAAA+v8D/s/8HyPc1zwgAAAAASUVORK5CYII=";
   present.classList.add('present');
 
   const x = randomPosition(gameArea.clientWidth - 50);
@@ -269,7 +245,6 @@ function createPresent() {
   present.style.left = x + 'px';
   present.style.top = y + 'px';
 
-  // Se não clicar no presente em 2 segundos, perde
   const timeout = setTimeout(() => {
     if(gameArea.contains(present)){
       alert('Você perdeu! Não conseguiu pegar o presente a tempo 😢');
@@ -294,10 +269,8 @@ function startGame() {
   presents.forEach(p => p.remove());
   presents = [];
 
-  // Criar presentes a cada 1 segundo
   gameInterval = setInterval(createPresent, 1000);
 
-  // Parar o jogo após o tempo máximo
   setTimeout(() => {
     if(gameInterval) {
       alert('Fim do jogo! Sua pontuação: ' + score);
